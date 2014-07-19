@@ -1,6 +1,6 @@
 
-var pkg = require('src/include.js');
-var ns  = require('src/ns.js').ns;
+var pkg = require('./src/include.js');
+var ns  = require('./src/ns.js').ns;
 
 
 var opt = {

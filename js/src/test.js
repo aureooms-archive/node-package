@@ -1,6 +1,8 @@
-var path = require('path');
+
 
 var test = function(ns, codepath, testpath){
+
+	var path = require('path');
 
 	var argv = require('optimist').argv;
 	var testrunner = require('qunit');

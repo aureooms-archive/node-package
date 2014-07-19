@@ -1,20 +1,20 @@
 
 
-
-var fs = require('fs');
-var util = require('util');
-var fmt = util.format;
-var recbuild_t = require('recbuild');
-var UglifyJS = require('uglify-js');
-var extend = require('node.extend');
-
-var dflt = {
-	ns  : undefined,
-	src : undefined,
-	out : undefined
-};
-
 var build = function(opt){
+	
+	var fs = require('fs');
+	var util = require('util');
+	var fmt = util.format;
+	var recbuild_t = require('recbuild');
+	var UglifyJS = require('uglify-js');
+	var extend = require('node.extend');
+
+	var dflt = {
+		ns   : undefined,
+		src  : undefined,
+		out  : undefined,
+		base : 0
+	};
 
 	opt = extend({}, dflt, opt);
 
@@ -43,9 +43,8 @@ var build = function(opt){
 		fs.writeSync(fd, '\n');
 	};
 
-
 	fd = fs.openSync(concat, 'w');
-	recbuild(opt.src, opt.ns, -1, fhandle, rhandle);
+	recbuild(opt.src, opt.ns, -opt.base, fhandle, rhandle);
 	fs.closeSync(fd);
 
 
