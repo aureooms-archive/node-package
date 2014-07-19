@@ -1,3 +1,4 @@
+
 var pkg = require('./src/build.js');
 var ns  = require('./src/ns.js').ns;
 

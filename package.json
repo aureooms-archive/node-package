@@ -24,9 +24,10 @@
   },
   "homepage": "https://aureooms.github.io/node-package",
   "dependencies": {
+    "optimist": "^0.6.1",
     "uglify-js": "^2.4.13",
-    "recquire": "^0.1.0",
-    "recbuild": "^0.0.3",
+    "recquire": "^0.1.1",
+    "recbuild": "^0.0.4",
     "node.extend": "^1.0.10",
     "coveralls": "^2.10.0",
     "codeclimate-test-reporter": "0.0.3",
@@ -34,6 +35,5 @@
     "istanbul": "^0.2.11"
   },
   "devDependencies": {
-    "optimist": "^0.6.1"
   }
 }
