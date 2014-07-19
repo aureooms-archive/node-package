@@ -4,6 +4,7 @@
 var include = function(opt){
 	
 	var recquire_t = require('recquire');
+	var extend = require('node.extend');
 
 	var dflt = {
 		ns    : undefined,

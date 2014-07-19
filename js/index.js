@@ -5,7 +5,7 @@ var ns  = require('./src/ns.js').ns;
 
 var opt = {
 	ns      : ns,
-	src     : 'src',
+	src     : __dirname + '/src/',
 	exports : module.exports,
 	base    : 0
 };
