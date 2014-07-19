@@ -1,39 +1,38 @@
 {
-  "name": "aureooms-node-package",
-  "version": "0.0.0",
-  "description": "Package helpers for node",
-  "main": "js/dist/pkg.js",
-  "scripts": {
-    "build": "node js/build.js",
-    "test": "node test/js/run.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://aureooms@github.com/aureooms/node-package.git"
-  },
-  "keywords": [
-    "node",
-    "package",
-    "build",
-    "auto"
-  ],
-  "author": "Ooms Aurélien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)",
-  "license": "GPL v2",
-  "bugs": {
-    "url": "https://github.com/aureooms/node-package/issues"
-  },
-  "homepage": "https://aureooms.github.io/node-package",
-  "dependencies": {
-    "optimist": "^0.6.1",
-    "uglify-js": "^2.4.13",
-    "recquire": "^0.1.1",
-    "recbuild": "^0.0.4",
-    "node.extend": "^1.0.10",
-    "coveralls": "^2.10.0",
-    "codeclimate-test-reporter": "0.0.3",
-    "qunit": "^0.6.3",
-    "istanbul": "^0.2.11"
-  },
-  "devDependencies": {
-  }
+	"scripts": {
+		"build": "node js/build.js",
+		"test": "node test/js/run.js"
+	},
+	"homepage": "https://aureooms.github.io/node-package",
+	"name": "aureooms-node-package",
+	"devDependencies": {},
+	"main": "js/dist/pkg.js",
+	"description": "Package helpers for node",
+	"version": "0.0.1",
+	"author": "Ooms Aur\u00e9lien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)",
+	"repository": {
+		"url": "https://aureooms@github.com/aureooms/node-package.git",
+		"type": "git"
+	},
+	"keywords": [
+		"node",
+		"package",
+		"build",
+		"auto"
+	],
+	"license": "GPL v2",
+	"bugs": {
+		"url": "https://github.com/aureooms/node-package/issues"
+	},
+	"dependencies": {
+		"istanbul": "^0.2.11",
+		"optimist": "^0.6.1",
+		"coveralls": "^2.10.0",
+		"recquire": "^0.1.1",
+		"codeclimate-test-reporter": "0.0.3",
+		"node.extend": "^1.0.10",
+		"uglify-js": "^2.4.13",
+		"recbuild": "^0.0.4",
+		"qunit": "^0.6.3"
+	}
 }

@@ -69,6 +69,7 @@ exports.build = build;
 var include = function(opt){
 	
 	var recquire_t = require('recquire');
+	var extend = require('node.extend');
 
 	var dflt = {
 		ns    : undefined,
@@ -103,7 +104,7 @@ var test = function(ns, codepath, testpath){
 	var path = require('path');
 	var argv = require('optimist').argv;
 	var testrunner = require('qunit');
-	
+
 	testrunner.options.coverage = true;
 	testrunner.options.log.tests = false;
 	testrunner.options.log.testing = false;
