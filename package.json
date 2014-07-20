@@ -1,12 +1,14 @@
 {
-	"author": "Ooms Aur\u00e9lien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)",
-	"bin": {
-		"codeclimate": "./node_modules/.bin/codeclimate",
-		"coveralls": "./node_modules/.bin/coveralls"
-	},
-	"bugs": {
-		"url": "https://github.com/aureooms/node-package/issues"
-	},
+	"name": "aureooms-node-package",
+	"description": "package helpers for node",
+	"version": "0.0.5",
+	"license": "GPL v2",
+	"keywords": [
+		"node",
+		"package",
+		"build",
+		"auto"
+	],
 	"dependencies": {
 		"codeclimate-test-reporter": "0.0.3",
 		"coveralls": "^2.10.0",
@@ -18,25 +20,23 @@
 		"recquire": "^0.1.1",
 		"uglify-js": "^2.4.13"
 	},
-	"description": "Package helpers for node",
 	"devDependencies": {},
-	"homepage": "https://aureooms.github.io/node-package",
-	"keywords": [
-		"node",
-		"package",
-		"build",
-		"auto"
-	],
-	"license": "GPL v2",
 	"main": "js/dist/pkg.js",
-	"name": "aureooms-node-package",
-	"repository": {
-		"type": "git",
-		"url": "https://aureooms@github.com/aureooms/node-package.git"
-	},
 	"scripts": {
 		"build": "node js/build.js",
 		"test": "node test/js/run.js"
 	},
-	"version": "0.0.5"
+	"bin": {
+		"codeclimate": "./node_modules/.bin/codeclimate",
+		"coveralls": "./node_modules/.bin/coveralls"
+	},
+	"homepage": "https://aureooms.github.io/node-package",
+	"repository": {
+		"type": "git",
+		"url": "https://aureooms@github.com/aureooms/node-package.git"
+	},
+	"bugs": {
+		"url": "https://github.com/aureooms/node-package/issues"
+	},
+	"author": "Ooms Aur\u00e9lien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)"
 }
