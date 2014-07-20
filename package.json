@@ -34,5 +34,9 @@
 		"uglify-js": "^2.4.13",
 		"recbuild": "^0.0.4",
 		"qunit": "^0.6.3"
+	},
+	"bin" : {
+		"coveralls" : "./node-modules/.bin/coveralls",
+		"codeclimate" : "./node-modules/.bin/codeclimate"
 	}
 }
