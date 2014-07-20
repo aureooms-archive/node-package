@@ -38,5 +38,5 @@
 		"build": "node js/build.js",
 		"test": "node test/js/run.js"
 	},
-	"version": "0.0.4"
+	"version": "0.0.5"
 }
