@@ -28,7 +28,9 @@
 	},
 	"bin": {
 		"codeclimate": "./node_modules/.bin/codeclimate",
-		"coveralls": "./node_modules/.bin/coveralls"
+		"coveralls": "./node_modules/.bin/coveralls",
+		"aureooms-node-package-test" : "./js/bin/aureooms-node-package-test.js",
+		"aureooms-node-package-build" : "./js/bin/aureooms-node-package-build.js"
 	},
 	"homepage": "https://aureooms.github.io/node-package",
 	"repository": {
