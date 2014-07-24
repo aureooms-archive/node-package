@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 
 var pkg = require('aureooms-node-package');
-var ns = require('./js/index.js').ns;
+var fs  = require('fs');
 
-pkg.test(ns, ['js', 'dist', ns + '.js'], ['test', 'js']);
+var config = pkg.config;
+
+var data = fs.readFileSync(config, 'utf8');
+var opt = JSON.parse(data);
+
+pkg.test(opt.ns, opt.code.main, opt.code.test);

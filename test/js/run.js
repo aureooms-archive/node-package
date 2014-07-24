@@ -1,5 +1,10 @@
 
-var pkg = require('../../js/src/test.js');
-var ns = require('../../js/index.js').ns;
+var pkg = require('../../js/index.js');
+var fs  = require('fs');
 
-pkg.test(ns, [__dirname, '..', '..', 'js', 'index.js'], [__dirname]);
+var config = pkg.config;
+
+var data = fs.readFileSync(config, 'utf8');
+var opt = JSON.parse(data);
+
+pkg.test(opt.ns, opt.code.main, opt.code.test);

@@ -1,13 +1,17 @@
 
-var pkg = require('./src/include.js');
-var ns  = require('./src/ns.js').ns;
+var include = require('./src/include.js').include;
+var config = require('./src/config.js').config;
+
+var fs  = require('fs');
+var data = fs.readFileSync(config, 'utf8');
+var opt = JSON.parse(data);
 
 
 var opt = {
-	ns      : ns,
+	ns      : opt.ns,
 	src     : __dirname + '/src/',
 	exports : module.exports,
 	base    : 0
 };
 
-pkg.include(opt);
+include(opt);

@@ -62,6 +62,10 @@ var build = function(opt){
 };
 
 exports.build = build;
+/* js/src/config.js */
+
+exports.config = 'pkg.json';
+
 /* js/src/include.js */
 
 
@@ -93,9 +97,6 @@ var include = function(opt){
 
 
 exports.include = include;
-/* js/src/ns.js */
-
-exports.ns = 'pkg';
 /* js/src/test.js */
 
 

@@ -1,0 +1,9 @@
+{
+	"ns" : "pkg",
+	"src" : "js/src/",
+	"out" : "js/dist/",
+	"code" : {
+		"main" : ["js", "index.js"],
+		"test" : ["test", "js"]
+	}
+}

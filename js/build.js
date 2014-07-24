@@ -1,12 +1,10 @@
 
-var pkg = require('./src/build.js');
-var ns  = require('./src/ns.js').ns;
+var pkg = require('./index.js');
+var fs  = require('fs');
 
+var config = pkg.config;
 
-var opt = {
-	ns : ns,
-	src : 'js/src/',
-	out : 'js/dist/'
-};
+var data = fs.readFileSync(config, 'utf8');
+var opt = JSON.parse(data);
 
 pkg.build(opt);
