@@ -84,12 +84,13 @@ var include = function(opt){
 		intro : 'intro.js',
 		outro : 'outro.js',
 		rec : false,
-		flat : true
+		flat : true,
+		debug : false
 	};
 
 	opt = extend({}, dflt, opt);
 
-	var recquire = recquire_t(opt.ns, opt.index, opt.intro, opt.outro, opt.rec, opt.flat);
+	var recquire = recquire_t(opt.ns, opt.index, opt.intro, opt.outro, opt.rec, opt.flat, opt.debug);
 
 	recquire(opt.src, opt.exports, -opt.base);
 
