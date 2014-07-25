@@ -70,7 +70,7 @@ exports.config = 'pkg.json';
 
 
 
-var include = function(opt){
+var include = function(opt, handler){
 	
 	var recquire_t = require('recquire');
 	var extend = require('node.extend');
@@ -90,14 +90,28 @@ var include = function(opt){
 
 	opt = extend({}, dflt, opt);
 
-	var recquire = recquire_t(opt.ns, opt.index, opt.intro, opt.outro, opt.rec, opt.flat, opt.debug);
+	var recquire = recquire_t(opt);
 
-	recquire(opt.src, opt.exports, -opt.base);
+	recquire(opt.src, opt.exports, -opt.base, handler);
 
 };
 
 
 exports.include = include;
+/* js/src/list.js */
+
+
+var list = function(opt){
+
+	var actions = [];
+	var handler = function(){ actions.push(arguments); };
+	include(opt, handler);
+	return actions;
+
+};
+
+
+exports.list = list;
 /* js/src/test.js */
 
 

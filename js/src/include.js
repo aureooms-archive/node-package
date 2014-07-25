@@ -1,7 +1,7 @@
 
 
 
-var include = function(opt){
+var include = function(opt, handler){
 	
 	var recquire_t = require('recquire');
 	var extend = require('node.extend');
@@ -21,9 +21,9 @@ var include = function(opt){
 
 	opt = extend({}, dflt, opt);
 
-	var recquire = recquire_t(opt.ns, opt.index, opt.intro, opt.outro, opt.rec, opt.flat, opt.debug);
+	var recquire = recquire_t(opt);
 
-	recquire(opt.src, opt.exports, -opt.base);
+	recquire(opt.src, opt.exports, -opt.base, handler);
 
 };
 
