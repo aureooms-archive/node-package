@@ -1,7 +1,7 @@
 {
 	"name": "aureooms-node-package",
 	"description": "package helpers for node",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"license": "GPL v2",
 	"keywords": [
 		"node",
