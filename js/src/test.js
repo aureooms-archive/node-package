@@ -12,13 +12,19 @@ var test = function(ns, codepath, testpath){
 	testrunner.options.log.assertions = false;
 	testrunner.options.log.summary = false;
 
+	var n = argv._.length || 1;
+	var failed = 0;
+	var done = 0;
+
 	var cb = function(err, report) {
 		if (err) {
-			console.log(report);
-			return err;
+			console.log('error : some weird error happened, the only clue we have is this error message -> ' + err.message);
+			process.exit(-1);
 		}
 
-		console.log(report);
+		failed += report.failed;
+		++done;
+		if (done === n) process.exit(failed);
 	};
 
 	var run = function(item) {
@@ -34,13 +40,15 @@ var test = function(ns, codepath, testpath){
 	};
 
 
-	for (var i = 0; i < argv._.length; ++i) {
+	var i;
+
+	for (i = 0; i < argv._.length; ++i) {
 		argv._[i] = ['src', argv._[i]+'.js'].join('/');
 	}
 
 	if (argv._.length === 0) argv._.push('index.js');
 
-	for (var i = 0; i < argv._.length; ++i) run(argv._[i]);
+	for (i = 0; i < argv._.length; ++i) run(argv._[i]);
 };
 
 exports.test = test;
