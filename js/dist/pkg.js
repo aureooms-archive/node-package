@@ -128,7 +128,12 @@ var test = function(ns, codepath, testpath){
 	testrunner.options.log.summary = false;
 
 	var cb = function(err, report) {
-		// console.dir(report);
+		if (err) {
+			console.log(report);
+			return err;
+		}
+
+		console.log(report);
 	};
 
 	var run = function(item) {
