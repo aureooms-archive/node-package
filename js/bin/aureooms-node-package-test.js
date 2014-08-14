@@ -8,4 +8,6 @@ var config = pkg.config;
 var data = fs.readFileSync(config, 'utf8');
 var opt = JSON.parse(data);
 
-pkg.test(opt.ns, opt.code.main, opt.code.test);
+var rc = pkg.test(opt.ns, opt.code.main, opt.code.test);
+if (rc) console.log('error : exiting with error code #' + rc);
+process.exit(rc);
