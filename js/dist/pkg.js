@@ -11,7 +11,7 @@ var build = function(opt){
 	var fs = require('fs');
 	var util = require('util');
 	var fmt = util.format;
-	var recbuild_t = require('recbuild');
+	var recbuild_t = require('aureooms-node-recursive-build');
 	var UglifyJS = require('uglify-js');
 	var extend = require('node.extend');
 
@@ -72,7 +72,7 @@ exports.config = 'pkg.json';
 
 var include = function(opt, handler){
 	
-	var recquire_t = require('recquire');
+	var recquire_t = require('aureooms-node-recursive-require');
 	var extend = require('node.extend');
 
 	var dflt = {

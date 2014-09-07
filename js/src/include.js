@@ -3,7 +3,7 @@
 
 var include = function(opt, handler){
 	
-	var recquire_t = require('recquire');
+	var recquire_t = require('aureooms-node-recursive-require');
 	var extend = require('node.extend');
 
 	var dflt = {

@@ -2,11 +2,12 @@
 	"name": "aureooms-node-package",
 	"description": "package helpers for node",
 	"version": "0.3.2",
-	"license": "GPL v2",
+	"license": "AGPL-3.0",
 	"keywords": [
 		"node",
 		"package",
 		"build",
+		"test",
 		"auto"
 	],
 	"dependencies": {
@@ -16,8 +17,8 @@
 		"node.extend": "^1.0.10",
 		"optimist": "^0.6.1",
 		"qunit": "^0.7.2",
-		"recbuild": "^0.0.4",
-		"recquire": "^0.2.1",
+		"aureooms-node-recursive-build": "^1.0.0",
+		"aureooms-node-recursive-require": "^1.0.0",
 		"uglify-js": "^2.4.13",
 		"groc": "^0.6.3"
 	},
@@ -37,10 +38,10 @@
 	"homepage": "https://aureooms.github.io/node-package",
 	"repository": {
 		"type": "git",
-		"url": "https://aureooms@github.com/aureooms/node-package.git"
+		"url": "https://github.com/aureooms/node-package.git"
 	},
 	"bugs": {
 		"url": "https://github.com/aureooms/node-package/issues"
 	},
-	"author": "Ooms Aur\u00e9lien <aurelien.ooms@gmail.com> (http://aureooms.wolkom.net/)"
+	"author": "aureooms"
 }

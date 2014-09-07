@@ -5,7 +5,7 @@ var build = function(opt){
 	var fs = require('fs');
 	var util = require('util');
 	var fmt = util.format;
-	var recbuild_t = require('recbuild');
+	var recbuild_t = require('aureooms-node-recursive-build');
 	var UglifyJS = require('uglify-js');
 	var extend = require('node.extend');
 
