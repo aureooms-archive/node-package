@@ -20,7 +20,7 @@
 		"aureooms-node-recursive-build": "^1.0.0",
 		"aureooms-node-recursive-require": "^1.0.0",
 		"uglify-js": "^2.4.13",
-		"groc": "^0.6.3"
+		"groc": "^0.7.0"
 	},
 	"devDependencies": {},
 	"main": "js/dist/pkg.js",
