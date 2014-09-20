@@ -1,7 +1,7 @@
 {
 	"name": "aureooms-node-package",
 	"description": "package helpers for node",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"license": "AGPL-3.0",
 	"keywords": [
 		"node",
