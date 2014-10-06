@@ -6,6 +6,7 @@ var test = function(ns, codepath, testpath){
 	var argv = require('optimist').argv;
 	var testrunner = require('qunit');
 
+	testrunner.options.maxBlockDuration = 20000;
 	testrunner.options.coverage = true;
 	testrunner.options.log.tests = false;
 	testrunner.options.log.testing = false;
