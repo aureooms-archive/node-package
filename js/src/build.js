@@ -1,7 +1,7 @@
 
 
 var build = function(opt){
-	
+
 	var fs = require('fs');
 	var util = require('util');
 	var fmt = util.format;
@@ -13,15 +13,17 @@ var build = function(opt){
 		ns   : undefined,
 		src  : undefined,
 		out  : undefined,
-		base : 0
+		base : 0,
+		rec  : false,
+		flat : true
 	};
 
 	opt = extend({}, dflt, opt);
 
 	var recbuild = recbuild_t({
 		name : opt.ns,
-		rec : false,
-		flat : true
+		rec : opt.rec,
+		flat : opt.flat
 	});
 
 	if (!fs.existsSync(opt.out)) fs.mkdirSync(opt.out);
