@@ -21,7 +21,7 @@ var include = function(opt, handler){
 
 	opt = extend({}, dflt, opt);
 
-	opt.name = opt.name.replace( '-' , '' ) ;
+	if ( opt.name ) opt.name = opt.name.replace( '-' , '' ) ;
 
 	var recquire = recquire_t(opt);
 
