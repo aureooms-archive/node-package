@@ -156,7 +156,7 @@ var test = function(name, codepath, testpath){
 			{
 				code : {
 					path : path.normalize(codepath.join('/')),
-					namespace : name
+					namespace : name.replace( '-' , '' )
 				},
 				tests : testpath.concat(item).join('/')
 			}, cb
