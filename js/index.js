@@ -8,7 +8,7 @@ var opt = JSON.parse(data);
 
 
 var opt = {
-	ns      : opt.ns,
+	name      : opt.name,
 	src     : __dirname + '/src/',
 	exports : module.exports,
 	base    : 0

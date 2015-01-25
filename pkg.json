@@ -1,5 +1,5 @@
 {
-	"ns" : "pkg",
+	"name" : "pkg",
 	"src" : "js/src/",
 	"out" : "js/dist/",
 	"code" : {

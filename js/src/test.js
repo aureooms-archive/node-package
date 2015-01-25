@@ -1,6 +1,6 @@
 
 
-var test = function(ns, codepath, testpath){
+var test = function(name, codepath, testpath){
 
 	var path = require('path');
 	var argv = require('optimist').argv;
@@ -33,7 +33,7 @@ var test = function(ns, codepath, testpath){
 			{
 				code : {
 					path : path.normalize(codepath.join('/')),
-					namespace: ns
+					namespace : name
 				},
 				tests : testpath.concat(item).join('/')
 			}, cb

@@ -10,7 +10,7 @@ var build = function(opt){
 	var extend = require('node.extend');
 
 	var dflt = {
-		ns   : undefined,
+		name : undefined,
 		src  : undefined,
 		out  : undefined,
 		base : 0,
@@ -20,16 +20,18 @@ var build = function(opt){
 
 	opt = extend({}, dflt, opt);
 
+	var namespace = opt.name.replace( '-' , '' ) ;
+
 	var recbuild = recbuild_t({
-		name : opt.ns,
-		rec : opt.rec,
+		name : namespace ,
+		rec  : opt.rec ,
 		flat : opt.flat
 	});
 
 	if (!fs.existsSync(opt.out)) fs.mkdirSync(opt.out);
 
 	var fd,
-	    base = fmt('%s/%s%%s', opt.out, opt.ns),
+	    base = fmt('%s/%s%%s', opt.out, opt.name),
 	    concat = fmt(base, '.js'),
 	    min = fmt(base, '.min.js'),
 	    map = fmt(base, '.js.map');
@@ -46,7 +48,7 @@ var build = function(opt){
 	};
 
 	fd = fs.openSync(concat, 'w');
-	recbuild(opt.src, opt.ns, -opt.base, fhandle, rhandle);
+	recbuild(opt.src, namespace, -opt.base, fhandle, rhandle);
 	fs.closeSync(fd);
 
 

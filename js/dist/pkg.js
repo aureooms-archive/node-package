@@ -16,7 +16,7 @@ var build = function(opt){
 	var extend = require('node.extend');
 
 	var dflt = {
-		ns   : undefined,
+		name : undefined,
 		src  : undefined,
 		out  : undefined,
 		base : 0,
@@ -26,16 +26,18 @@ var build = function(opt){
 
 	opt = extend({}, dflt, opt);
 
+	var namespace = opt.name.replace( '-' , '' ) ;
+
 	var recbuild = recbuild_t({
-		name : opt.ns,
-		rec : opt.rec,
+		name : namespace ,
+		rec  : opt.rec ,
 		flat : opt.flat
 	});
 
 	if (!fs.existsSync(opt.out)) fs.mkdirSync(opt.out);
 
 	var fd,
-	    base = fmt('%s/%s%%s', opt.out, opt.ns),
+	    base = fmt('%s/%s%%s', opt.out, opt.name),
 	    concat = fmt(base, '.js'),
 	    min = fmt(base, '.min.js'),
 	    map = fmt(base, '.js.map');
@@ -52,7 +54,7 @@ var build = function(opt){
 	};
 
 	fd = fs.openSync(concat, 'w');
-	recbuild(opt.src, opt.ns, -opt.base, fhandle, rhandle);
+	recbuild(opt.src, namespace, -opt.base, fhandle, rhandle);
 	fs.closeSync(fd);
 
 
@@ -74,24 +76,26 @@ exports.config = 'pkg.json';
 
 
 var include = function(opt, handler){
-	
+
 	var recquire_t = require('aureooms-node-recursive-require');
 	var extend = require('node.extend');
 
 	var dflt = {
-		ns    : undefined,
-		src   : undefined,
+		name    : undefined,
+		src     : undefined,
 		exports : undefined,
-		base  : 0,
-		index : 'index.js',
-		intro : 'intro.js',
-		outro : 'outro.js',
-		rec : false,
-		flat : true,
-		debug : false
+		base    : 0,
+		index   : 'index.js',
+		intro   : 'intro.js',
+		outro   : 'outro.js',
+		rec     : false,
+		flat    : true,
+		debug   : false
 	};
 
 	opt = extend({}, dflt, opt);
+
+	opt.name = opt.name.replace( '-' , '' ) ;
 
 	var recquire = recquire_t(opt);
 
@@ -101,6 +105,7 @@ var include = function(opt, handler){
 
 
 exports.include = include;
+
 /* js/src/list.js */
 
 
@@ -118,7 +123,7 @@ exports.list = list;
 /* js/src/test.js */
 
 
-var test = function(ns, codepath, testpath){
+var test = function(name, codepath, testpath){
 
 	var path = require('path');
 	var argv = require('optimist').argv;
@@ -151,7 +156,7 @@ var test = function(ns, codepath, testpath){
 			{
 				code : {
 					path : path.normalize(codepath.join('/')),
-					namespace: ns
+					namespace : name
 				},
 				tests : testpath.concat(item).join('/')
 			}, cb

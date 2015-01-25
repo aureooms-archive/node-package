@@ -1,7 +1,7 @@
 [node-package](http://aureooms.github.io/node-package)
-========
+======================================================
 
-package helpers for node
+Package helpers for node.
 
 [![NPM license](http://img.shields.io/npm/l/aureooms-node-package.svg?style=flat)](https://raw.githubusercontent.com/aureooms/node-package/master/LICENSE)
 [![NPM version](http://img.shields.io/npm/v/aureooms-node-package.svg?style=flat)](https://www.npmjs.org/package/aureooms-node-package)
@@ -13,3 +13,9 @@ package helpers for node
 [![NPM downloads per month](http://img.shields.io/npm/dm/aureooms-node-package.svg?style=flat)](https://www.npmjs.org/package/aureooms-node-package)
 [![GitHub issues](http://img.shields.io/github/issues/aureooms/node-package.svg?style=flat)](https://github.com/aureooms/node-package/issues)
 
+Used in [aureooms/js-algo](https://github.com/aureooms/js-algo),
+[aureooms/js-data-structures](https://github.com/aureooms/js-data-structures)
+and all there sub packages to handle building and testing.
+
+Use together with [aureooms/sak](https://github.com/aureooms/sak) to get
+automated package creation as well as npm and bower registration and releases.
