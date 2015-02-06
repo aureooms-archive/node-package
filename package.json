@@ -17,7 +17,7 @@
 		"node.extend": "^1.1.2",
 		"optimist": "^0.6.1",
 		"qunit": "^0.7.4",
-		"aureooms-node-recursive-build": "^1.0.1",
+		"aureooms-node-recursive-build": "^1.0.2",
 		"aureooms-node-recursive-require": "^1.0.1",
 		"uglify-js": "^2.4.15",
 		"groc": "^0.8.0"
