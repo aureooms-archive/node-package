@@ -9,6 +9,7 @@ var build = function(opt){
 	var UglifyJS = require('uglify-js');
 	var babel = require('babel-core');
 	var extend = require('node.extend');
+	var path = require('path');
 
 	var dflt = {
 		name : undefined,
@@ -34,9 +35,9 @@ var build = function(opt){
 
 	var fd,
 	    base = fmt('%s/%s%%s', opt.out, opt.name),
-	    concat = fmt(base, '.js'),
-	    min = fmt(base, '.min.js'),
-	    map = fmt(base, '.js.map');
+	    concat = path.normalize(fmt(base, '.js')),
+	    min = path.normalize(fmt(base, '.min.js')),
+	    map = path.normalize(fmt(base, '.js.map'));
 
 	var fhandle = function(f) {
 		var raw = fs.readFileSync(f);
