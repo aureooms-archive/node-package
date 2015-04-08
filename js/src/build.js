@@ -7,6 +7,7 @@ var build = function(opt){
 	var fmt = util.format;
 	var recbuild_t = require('aureooms-node-recursive-build');
 	var UglifyJS = require('uglify-js');
+	var babel = require('babel-core');
 	var extend = require('node.extend');
 
 	var dflt = {
@@ -15,7 +16,8 @@ var build = function(opt){
 		out  : undefined,
 		base : 0,
 		rec  : false,
-		flat : true
+		flat : true,
+		babel: false
 	};
 
 	opt = extend({}, dflt, opt);
@@ -51,6 +53,17 @@ var build = function(opt){
 	recbuild(opt.src, namespace, -opt.base, fhandle, rhandle);
 	fs.closeSync(fd);
 
+	if ( opt.babel ) {
+
+		var es5 = babel.transformFileSync( concat ) ;
+
+		fd = fs.openSync( concat , 'w' ) ;
+
+		fs.writeSync( fd , es5.code ) ;
+
+		fs.closeSync( fd ) ;
+
+	}
 
 	var minified = UglifyJS.minify(concat, { outSourceMap: map });
 

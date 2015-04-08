@@ -1,47 +1,48 @@
 {
-	"name": "aureooms-node-package",
-	"description": "package helpers for node",
-	"version": "2.0.3",
-	"license": "AGPL-3.0",
-	"keywords": [
-		"node",
-		"package",
-		"build",
-		"test",
-		"auto"
-	],
-	"dependencies": {
-		"codeclimate-test-reporter": "^0.0.4",
-		"coveralls": "^2.11.2",
-		"istanbul": "^0.3.2",
-		"node.extend": "^1.1.2",
-		"optimist": "^0.6.1",
-		"qunit": "^0.7.4",
-		"aureooms-node-recursive-build": "^1.0.2",
-		"aureooms-node-recursive-require": "^1.0.1",
-		"uglify-js": "^2.4.15",
-		"groc": "^0.8.0"
-	},
-	"devDependencies": {},
-	"main": "js/dist/pkg.js",
-	"scripts": {
-		"build": "node js/build.js",
-		"test": "node test/js/run.js"
-	},
-	"bin": {
-		"codeclimate": "./node_modules/.bin/codeclimate",
-		"coveralls": "./node_modules/.bin/coveralls",
-		"groc": "./node_modules/.bin/groc",
-		"aureooms-node-package-test": "./js/bin/aureooms-node-package-test.js",
-		"aureooms-node-package-build": "./js/bin/aureooms-node-package-build.js"
-	},
-	"homepage": "https://aureooms.github.io/node-package",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/aureooms/node-package.git"
-	},
-	"bugs": {
-		"url": "https://github.com/aureooms/node-package/issues"
-	},
-	"author": "aureooms"
+  "name": "aureooms-node-package",
+  "description": "package helpers for node",
+  "version": "2.0.3",
+  "license": "AGPL-3.0",
+  "keywords": [
+    "node",
+    "package",
+    "build",
+    "test",
+    "auto"
+  ],
+  "dependencies": {
+    "aureooms-node-recursive-build": "^1.0.2",
+    "aureooms-node-recursive-require": "^1.0.1",
+    "babel-core": "^5.0.10",
+    "codeclimate-test-reporter": "^0.0.4",
+    "coveralls": "^2.11.2",
+    "groc": "^0.8.0",
+    "istanbul": "^0.3.2",
+    "node.extend": "^1.1.2",
+    "optimist": "^0.6.1",
+    "qunit": "^0.7.4",
+    "uglify-js": "^2.4.15"
+  },
+  "devDependencies": {},
+  "main": "js/dist/pkg.js",
+  "scripts": {
+    "build": "node js/build.js",
+    "test": "node test/js/run.js"
+  },
+  "bin": {
+    "codeclimate": "./node_modules/.bin/codeclimate",
+    "coveralls": "./node_modules/.bin/coveralls",
+    "groc": "./node_modules/.bin/groc",
+    "aureooms-node-package-test": "./js/bin/aureooms-node-package-test.js",
+    "aureooms-node-package-build": "./js/bin/aureooms-node-package-build.js"
+  },
+  "homepage": "https://aureooms.github.io/node-package",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aureooms/node-package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aureooms/node-package/issues"
+  },
+  "author": "aureooms"
 }
