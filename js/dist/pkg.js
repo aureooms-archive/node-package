@@ -129,11 +129,12 @@
 	exports.list = list;
 	/* js/src/test.js */
 
-	var test = function test(name, codepath, testpath) {
+	var test = function test(opt) {
 
 		var path = require('path');
 		var argv = require('optimist').argv;
 		var testrunner = require('qunit');
+		var extend = require('node.extend');
 
 		testrunner.options.maxBlockDuration = 20000;
 		testrunner.options.coverage = true;
@@ -141,6 +142,10 @@
 		testrunner.options.log.testing = false;
 		testrunner.options.log.assertions = false;
 		testrunner.options.log.summary = false;
+
+		if (opt.babel) testrunner.options.deps = 'node_modules/babel-core/polyfill';
+
+		extend(true, testrunner.options, opt.test);
 
 		var n = argv._.length || 1;
 		var failed = 0;
@@ -160,10 +165,10 @@
 		var run = function run(item) {
 			testrunner.run({
 				code: {
-					path: path.normalize(codepath.join('/')),
-					namespace: name.replace('-', '')
+					path: path.normalize(opt.code.main.join('/')),
+					namespace: opt.name.replace('-', '')
 				},
-				tests: testpath.concat(item).join('/')
+				tests: opt.code.test.concat(item).join('/')
 			}, cb);
 		};
 
