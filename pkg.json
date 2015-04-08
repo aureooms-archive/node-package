@@ -2,6 +2,7 @@
 	"name" : "pkg",
 	"src" : "js/src/",
 	"out" : "js/dist/",
+	"babel": true,
 	"code" : {
 		"main" : ["js", "index.js"],
 		"test" : ["test", "js"]
