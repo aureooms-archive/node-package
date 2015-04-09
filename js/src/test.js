@@ -14,7 +14,7 @@ var test = function ( opt ) {
 	testrunner.options.log.assertions = false ;
 	testrunner.options.log.summary = false ;
 
-	if ( opt.babel ) testrunner.options.deps = "node_modules/babel-core/polyfill" ;
+	if ( opt.babel ) testrunner.options.deps = __dirname + "/../../node_modules/babel-core/polyfill" ;
 
 	extend( true , testrunner.options , opt.test ) ;
 
