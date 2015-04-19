@@ -26,6 +26,7 @@
 	"devDependencies": {},
 	"main": "js/dist/pkg.js",
 	"scripts": {
+		"doc": "true",
 		"build": "node js/build.js",
 		"test": "node test/js/run.js"
 	},
