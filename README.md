@@ -33,19 +33,20 @@ To run the following command you must:
 
 The following command will:
 
-  1. Create a new directory named js-<namespace> in the current working
+  1. Create a new directory named `js-<namespace>` in the current working
 directory;
   2. Initialize a new git repository in this directory;
-  3. Create a repository named js-<namespace> on github for <username>;
+  3. Create a repository named `js-<namespace>` on github for `<username>`;
   4. **Add an AGPL LICENSE file to the repository**;
-  5. Configure the local git repository with https://<username>@github.com/<username>/js-<namespace>
+  5. Configure the local git repository with
+`https://<username>@github.com/<username>/js-<namespace>`
 as its origin remote;
   6. Create a gh-pages branch that will be populated by the `npm run doc` command
 using [groc](https://github.com/nevir/groc);
   7. Create a `README.md` with badges;
   8. Create a configuration file for [travis-ci.org](https://travis-ci.org/) or [drone.io](https://drone.io/);
   9. Create a `pkg.json`, a `package.json`, a `bower.json` and a `component.json`;
-  10. Register a package named <username>-js-<namespace> on npm and bower.
+  10. Register a package named `<username>-js-<namespace>` on npm and bower.
 
 After running the command you will have to:
 
@@ -66,8 +67,8 @@ $ cdb n <namespace> <description> -k <keyword>* -u <username> -c (travis-ci|dron
 ```
 
 Note that `--ci travis-ci` is the default. `--keywords` can be left empty.
-If `--username` is not given then either **sak** can find it in your `~/.sak`
-config file or will prompt for it.
+If `--username` is not given then either [sak](https://github.com/aureooms/sak)
+can find it in your `~/.sak` config file or will prompt for it.
 
 ## Automated releases
 
@@ -95,7 +96,7 @@ Release a patch version for [duo](https://github.com/duojs/duo),
 $ npm release patch
 ```
 
-Release version <semver> for [duo](https://github.com/duojs/duo),
+Release version `<semver>` for [duo](https://github.com/duojs/duo),
 [component](https://github.com/componentjs/component),
 [bower](https://github.com/bower/bower), and [npm](https://github.com/npm/npm):
 
