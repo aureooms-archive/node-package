@@ -56,7 +56,9 @@ var build = function(opt){
 
 	if ( opt.babel ) {
 
-		var es5 = babel.transformFileSync( concat ) ;
+		if ( opt.babel === true ) opt.babel = { } ;
+
+		var es5 = babel.transformFileSync( concat , opt.babel ) ;
 
 		fd = fs.openSync( concat , 'w' ) ;
 
