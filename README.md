@@ -1,4 +1,4 @@
-## [node-package](http://aureooms.github.io/node-package)
+# [node-package](http://aureooms.github.io/node-package)
 
 JavaScript code bricks package helpers as a npm module.
 
@@ -22,7 +22,7 @@ automated package creation as well as [duo](https://github.com/duojs/duo),
 [bower](https://github.com/bower/bower), and [npm](https://github.com/npm/npm)
 registration and releases.
 
-# Automated package creation and registration:
+## Automated package creation and registration:
 
 To run the following command you must:
 
@@ -69,7 +69,7 @@ Note that `--ci travis-ci` is the default. `--keywords` can be left empty.
 If `--username` is not given then either **sak** can find it in your `~/.sak`
 config file or will prompt for it.
 
-# Automated releases
+## Automated releases
 
 Release a major version for [duo](https://github.com/duojs/duo),
 [component](https://github.com/componentjs/component),
@@ -106,7 +106,7 @@ $ npm release <semver>
 Note that `$ npm release <...>` can be shortened to `$ npm r <...>`.
 
 
-# How does the doc, build and test commands work:
+## How does the doc, build and test commands work:
 
 Running the package creation command explained earlier will install
 `aureooms-node-package` as a development dependency of your package. This is
