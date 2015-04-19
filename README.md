@@ -1,7 +1,7 @@
 [node-package](http://aureooms.github.io/node-package)
 ======================================================
 
-Package helpers for node.
+JavaScript code bricks package helpers as a npm module.
 
 [![NPM license](http://img.shields.io/npm/l/aureooms-node-package.svg?style=flat)](https://raw.githubusercontent.com/aureooms/node-package/master/LICENSE)
 [![NPM version](http://img.shields.io/npm/v/aureooms-node-package.svg?style=flat)](https://www.npmjs.org/package/aureooms-node-package)
@@ -15,7 +15,10 @@ Package helpers for node.
 
 Used in [js-algo](https://github.com/aureooms/js-algo),
 [js-data-structures](https://github.com/aureooms/js-data-structures)
-and all there sub packages to handle building and testing.
+and all their subpackages to handle building and testing.
 
 Use together with [sak](https://github.com/aureooms/sak) to get
-automated package creation as well as npm and bower registration and releases.
+automated package creation as well as [duo](https://github.com/duojs/duo),
+[component](https://github.com/componentjs/component),
+[bower](https://github.com/bower/bower), and [npm](https://github.com/npm/npm)
+registration and releases.
