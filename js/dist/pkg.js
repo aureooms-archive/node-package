@@ -20,6 +20,7 @@
 			var path = require('path');
 
 			var dflt = {
+				fullname: undefined,
 				name: undefined,
 				src: undefined,
 				out: undefined,
@@ -34,6 +35,7 @@
 			var namespace = opt.name.replace('-', '');
 
 			var recbuild = recbuild_t({
+				fullname: opt.fullname,
 				name: namespace,
 				rec: opt.rec,
 				flat: opt.flat
@@ -194,10 +196,10 @@
 	if (typeof exports === 'object') {
 		definition(exports);
 	} else if (typeof define === 'function' && define.amd) {
-		define('pkg', [], function () {
+		define('aureooms-node-package', [], function () {
 			return definition({});
 		});
 	} else if (typeof window === 'object' && typeof window.document === 'object') {
 		definition(window.pkg = {});
-	} else console.error('unable to detect type of module to define for pkg');
+	} else console.error('unable to detect type of module to define for aureooms-node-package');
 })();

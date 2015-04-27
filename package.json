@@ -11,7 +11,7 @@
 		"auto"
 	],
 	"dependencies": {
-		"aureooms-node-recursive-build": "^1.1.2",
+		"aureooms-node-recursive-build": "^1.1.3",
 		"aureooms-node-recursive-require": "^1.0.3",
 		"babel-core": "^5.1.13",
 		"codeclimate-test-reporter": "^0.0.4",

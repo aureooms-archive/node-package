@@ -12,6 +12,7 @@ var build = function(opt){
 	var path = require('path');
 
 	var dflt = {
+		fullname : undefined,
 		name : undefined,
 		src  : undefined,
 		out  : undefined,
@@ -26,6 +27,7 @@ var build = function(opt){
 	var namespace = opt.name.replace( '-' , '' ) ;
 
 	var recbuild = recbuild_t({
+		fullname : opt.fullname ,
 		name : namespace ,
 		rec  : opt.rec ,
 		flat : opt.flat
