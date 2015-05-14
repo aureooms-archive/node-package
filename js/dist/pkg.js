@@ -32,7 +32,7 @@
 
 			opt = extend({}, dflt, opt);
 
-			var namespace = opt.name.replace('-', '');
+			var namespace = opt.name.replace(/-/g, '');
 
 			var recbuild = recbuild_t({
 				fullname: opt.fullname,
@@ -111,7 +111,7 @@
 
 			opt = extend({}, dflt, opt);
 
-			if (opt.name) opt.name = opt.name.replace('-', '');
+			if (opt.name) opt.name = opt.name.replace(/-/g, '');
 
 			var recquire = recquire_t(opt);
 
@@ -172,7 +172,7 @@
 				testrunner.run({
 					code: {
 						path: path.normalize(opt.code.main.join('/')),
-						namespace: opt.name.replace('-', '')
+						namespace: opt.name.replace(/-/g, '')
 					},
 					tests: opt.code.test.concat(item).join('/')
 				}, cb);

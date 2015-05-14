@@ -38,7 +38,7 @@ var test = function ( opt ) {
 			{
 				code : {
 					path : path.normalize(opt.code.main.join('/')),
-					namespace : opt.name.replace( '-' , '' )
+					namespace : opt.name.replace( /-/g , '' )
 				},
 				tests : opt.code.test.concat(item).join('/')
 			}, cb

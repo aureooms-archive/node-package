@@ -24,7 +24,7 @@ var build = function(opt){
 
 	opt = extend({}, dflt, opt);
 
-	var namespace = opt.name.replace( '-' , '' ) ;
+	var namespace = opt.name.replace( /-/g , '' ) ;
 
 	var recbuild = recbuild_t({
 		fullname : opt.fullname ,
