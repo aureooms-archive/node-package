@@ -200,6 +200,6 @@
 			return definition({});
 		});
 	} else if (typeof window === 'object' && typeof window.document === 'object') {
-		definition(window.pkg = {});
+		definition(window['pkg'] = {});
 	} else console.error('unable to detect type of module to define for aureooms-node-package');
 })();

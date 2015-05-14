@@ -13,15 +13,15 @@
 	"dependencies": {
 		"aureooms-node-recursive-build": "^1.1.3",
 		"aureooms-node-recursive-require": "^1.0.3",
-		"babel-core": "^5.1.13",
+		"babel-core": "^5.3.3",
 		"codeclimate-test-reporter": "^0.0.4",
 		"coveralls": "^2.11.2",
 		"groc": "^0.8.0",
-		"istanbul": "^0.3.13",
+		"istanbul": "^0.3.14",
 		"node.extend": "^1.1.3",
 		"optimist": "^0.6.1",
 		"qunit": "^0.7.6",
-		"uglify-js": "^2.4.20"
+		"uglify-js": "^2.4.21"
 	},
 	"devDependencies": {},
 	"main": "js/dist/pkg.js",
