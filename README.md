@@ -1,4 +1,4 @@
-# [node-package](http://aureooms.github.io/node-package)
+# [node-package](https://github.com/aureooms/node-package)
 
 JavaScript code bricks package helpers as a npm module.
 
