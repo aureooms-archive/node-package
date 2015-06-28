@@ -107,7 +107,7 @@ $ npm release <semver>
 Note that `$ npm release <...>` can be shortened to `$ npm r <...>`.
 
 
-## How does the doc, build and test commands work:
+## How does the doc, build and test commands work?
 
 Running the package creation command explained earlier will install
 `aureooms-node-package` as a development dependency of your package. This is
