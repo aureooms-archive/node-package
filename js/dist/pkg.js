@@ -149,7 +149,7 @@
 			testrunner.options.log.assertions = false;
 			testrunner.options.log.summary = false;
 
-			if (opt.babel) testrunner.options.deps = __dirname + '/../../node_modules/babel-core/polyfill';
+			if (opt.babel) testrunner.options.deps = __dirname + "/../../node_modules/babel-core/polyfill";
 
 			extend(true, testrunner.options, opt.test);
 
@@ -193,13 +193,13 @@
 
 		return exports;
 	};
-	if (typeof exports === 'object') {
+	if (typeof exports === "object") {
 		definition(exports);
-	} else if (typeof define === 'function' && define.amd) {
-		define('aureooms-node-package', [], function () {
+	} else if (typeof define === "function" && define.amd) {
+		define("aureooms-node-package", [], function () {
 			return definition({});
 		});
-	} else if (typeof window === 'object' && typeof window.document === 'object') {
-		definition(window['pkg'] = {});
-	} else console.error('unable to detect type of module to define for aureooms-node-package');
+	} else if (typeof window === "object" && typeof window.document === "object") {
+		definition(window["pkg"] = {});
+	} else console.error("unable to detect type of module to define for aureooms-node-package");
 })();
