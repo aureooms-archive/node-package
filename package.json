@@ -11,17 +11,17 @@
 		"auto"
 	],
 	"dependencies": {
-		"aureooms-node-recursive-build": "^1.1.3",
+		"aureooms-node-recursive-build": "^2.0.0",
 		"aureooms-node-recursive-require": "^1.0.3",
-		"babel-core": "^5.3.3",
-		"codeclimate-test-reporter": "^0.0.4",
-		"coveralls": "^2.11.2",
+		"babel-core": "^5.8.21",
+		"codeclimate-test-reporter": "^0.1.0",
+		"coveralls": "^2.11.3",
 		"groc": "^0.8.0",
-		"istanbul": "^0.3.14",
-		"node.extend": "^1.1.3",
+		"istanbul": "^0.3.17",
+		"node.extend": "^1.1.5",
 		"optimist": "^0.6.1",
 		"qunit": "^0.7.6",
-		"uglify-js": "^2.4.21"
+		"uglify-js": "^2.4.24"
 	},
 	"devDependencies": {},
 	"main": "js/dist/pkg.js",
