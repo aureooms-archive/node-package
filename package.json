@@ -31,8 +31,8 @@
 		"test": "node test/js/run.js"
 	},
 	"bin": {
-		"codeclimate": "./node_modules/.bin/codeclimate.js",
-		"coveralls": "./node_modules/.bin/coveralls.js",
+		"codeclimate": "./node_modules/.bin/codeclimate-test-reporter",
+		"coveralls": "./node_modules/.bin/coveralls",
 		"groc": "./node_modules/.bin/groc",
 		"aureooms-node-package-test": "./js/bin/aureooms-node-package-test.js",
 		"aureooms-node-package-build": "./js/bin/aureooms-node-package-build.js"
