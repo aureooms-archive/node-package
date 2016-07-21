@@ -32,7 +32,7 @@
 		"test": "node test/js/run.js"
 	},
 	"bin": {
-		"codeclimate": "./node_modules/.bin/codeclimate-test-reporter",
+		"codeclimate-test-reporter": "./node_modules/.bin/codeclimate-test-reporter",
 		"coveralls": "./node_modules/.bin/coveralls",
 		"groc": "./node_modules/.bin/groc",
 		"aureooms-node-package-test": "./js/bin/aureooms-node-package-test.js",
