@@ -149,7 +149,7 @@
 			testrunner.options.log.assertions = false;
 			testrunner.options.log.summary = false;
 
-			if (opt.babel) testrunner.options.deps = __dirname + "/../../node_modules/babel-core/polyfill";
+			if (opt.babel) testrunner.options.deps = __dirname + "/../../node_modules/babel-polyfill";
 
 			extend(true, testrunner.options, opt.test);
 
