@@ -1,14 +1,12 @@
-'use strict';
-
 (function () {
 
 	'use strict';
 
-	var definition = function definition(exports, undefined) {
+	var definition = function (exports, undefined) {
 
 		/* js/src/build.js */
 
-		var build = function build(opt) {
+		var build = function (opt) {
 
 			var fs = require('fs');
 			var util = require('util');
@@ -49,13 +47,13 @@
 			    min = path.normalize(fmt(base, '.min.js')),
 			    map = path.normalize(fmt(base, '.js.map'));
 
-			var fhandle = function fhandle(f) {
+			var fhandle = function (f) {
 				var raw = fs.readFileSync(f);
 				fs.writeSync(fd, raw.toString());
 				fs.writeSync(fd, '\n');
 			};
 
-			var rhandle = function rhandle(raw) {
+			var rhandle = function (raw) {
 				fs.writeSync(fd, raw);
 				fs.writeSync(fd, '\n');
 			};
@@ -91,7 +89,7 @@
 
 		/* js/src/include.js */
 
-		var include = function include(opt, handler) {
+		var include = function (opt, handler) {
 
 			var recquire_t = require('aureooms-node-recursive-require');
 			var extend = require('node.extend');
@@ -122,10 +120,10 @@
 
 		/* js/src/list.js */
 
-		var list = function list(opt) {
+		var list = function (opt) {
 
 			var actions = [];
-			var handler = function handler() {
+			var handler = function () {
 				actions.push(arguments);
 			};
 			include(opt, handler);
@@ -135,7 +133,7 @@
 		exports.list = list;
 		/* js/src/test.js */
 
-		var test = function test(opt) {
+		var test = function (opt) {
 
 			var path = require('path');
 			var argv = require('optimist').argv;
@@ -157,7 +155,7 @@
 			var failed = 0;
 			var done = 0;
 
-			var cb = function cb(err, report) {
+			var cb = function (err, report) {
 				if (err) {
 					console.log('error : some weird error happened, the only clue we have is this error message -> ' + err.message);
 					process.exit(-1);
@@ -168,7 +166,7 @@
 				if (done === n) process.exit(failed);
 			};
 
-			var run = function run(item) {
+			var run = function (item) {
 				testrunner.run({
 					code: {
 						path: path.normalize(opt.code.main.join('/')),
