@@ -1,7 +1,7 @@
 {
 	"name": "aureooms-node-package",
 	"description": "JavaScript code bricks package helpers as a npm module",
-	"version": "6.0.1",
+	"version": "7.0.0",
 	"license": "AGPL-3.0",
 	"keywords": [
 		"node",
