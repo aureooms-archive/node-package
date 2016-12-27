@@ -15,7 +15,7 @@
 		"aureooms-node-recursive-require": "^1.0.3",
 		"babel-core": "^6.11.4",
 		"babel-polyfill": "^6.9.1",
-		"codeclimate-test-reporter": "^0.3.3",
+		"codeclimate-test-reporter": "^0.4.0",
 		"coveralls": "^2.11.11",
 		"groc": "^0.8.0",
 		"istanbul": "^0.4.4",
